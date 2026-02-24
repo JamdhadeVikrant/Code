@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Kitchen - Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css for simple animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-bILk1b6iZOwzUpR1ppJp1nBBqXokf+clasIuB2qFQdPa6YDL3G2sk+Fq7f4DmR+zXlO3zqdv0Y5w5y5aY/jU3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">S Kitchen</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#speciality">Our Speciality</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="booking.html">Book the Table</a></li>
+                <li id="auth-links">
+                    <a href="login.html" class="btn login">Login</a>
+                    <a href="register.html" class="btn register">Register</a>
+                </li>
+                <li id="logout-link" class="hide"><a href="#" class="btn logout">Logout</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <h1>Welcome to S Kitchen</h1>
+            <p>Authentic Maharashtrian Flavors.</p>
+            <a href="booking.html" class="btn cta">Reserve Your Seat</a>
+        </div>
+    </header>
+
+    <!-- Our Speciality -->
+    <section class="speciality" id="speciality">
+        <div class="container">
+            <h2 class="section-title">Our Speciality</h2>
+            <div class="cards">
+                <div class="card animate__animated animate__zoomIn">
+                    <img src="https://source.unsplash.com/400x300/?vada-pav" alt="Special Dish 1">
+                    <h3>Vada Pav Delight</h3>
+                    <p>Spicy potato fritter in a soft bun with chutneys.</p>
+                </div>
+                <div class="card animate__animated animate__zoomIn animate__delay-1s">
+                    <img src="https://source.unsplash.com/400x300/?misal-pav" alt="Special Dish 2">
+                    <h3>Misal Pav</h3>
+                    <p>Fiery sprouted bean curry served with pav and farsan.</p>
+                </div>
+                <div class="card animate__animated animate__zoomIn animate__delay-2s">
+                    <img src="https://source.unsplash.com/400x300/?puran-poli" alt="Special Dish 3">
+                    <h3>Puran Poli</h3>
+                    <p>Sweet stuffed flatbread made with chana dal and jaggery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 S Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+    <!-- simple hamburger script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
